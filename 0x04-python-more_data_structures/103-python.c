@@ -1,6 +1,12 @@
 #include "/usr/include/python3.11/Python.h"
 #include <stdio.h>
 
+/**
+ * print_hexn - prints the first n bytes form string
+ * @str: the string to print from
+ * @n: the size to be printed
+ * Return: void
+*/
 void print_hexn(const char *str, int n)
 {
 	int i = 0;
@@ -11,6 +17,11 @@ void print_hexn(const char *str, int n)
 	printf("%02x", str[i]);
 }
 
+/**
+ * print_python_bytes - prints byts object
+ * @p: the pyhton objection
+ * Return: void
+*/
 void print_python_bytes(PyObject *p)
 {
 	PyBytesObject *clone = (PyBytesObject *) p;
@@ -37,6 +48,11 @@ void print_python_bytes(PyObject *p)
 	}
 }
 
+/**
+ * print_python_list - prints list object
+ * @p: the pyhton objection
+ * Return: void
+*/
 void print_python_list(PyObject *p)
 {
 	int i = 0, list_len = 0;
